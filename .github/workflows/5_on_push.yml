@@ -1,7 +1,12 @@
-name: Github actions - Push Template Basic
+name: Github actions - Push General
 run-name: Running - ${{ github.event_name }}
 on:
   push:
+    branches:
+    - master
+    - develop
+    # branches-ignore:
+    # - 'release/**'
     paths:
       - '**.txt'
 jobs:
@@ -10,4 +15,4 @@ jobs:
     steps:
       - name: Comments
         run: | 
-          echo "Comment on workflow - push on path PUSH"
+          echo "Comment on workflow - ON PUSH"
