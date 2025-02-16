@@ -1,0 +1,29 @@
+name: GitHub Actions - Workflow dispatch Template - Choice
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: Select a tag
+        type: choice
+        options:
+          - tag_1
+          - tag_2
+          - tag_3
+        default: tag_2
+        required: true
+      browser:
+        description: Select a browser
+        type: string
+      severidad:
+        description: Critical feature?
+        type: boolean  
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo "Tag:  ${{inputs.tags}}"
+          echo "browser: ${{inputs.browser}}"
+          echo "severidad: ${{inputs.tags}}"
