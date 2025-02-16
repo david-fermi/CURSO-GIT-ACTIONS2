@@ -26,4 +26,4 @@ jobs:
         run: |
           echo "Tag:  ${{inputs.tags}}"
           echo "browser: ${{inputs.browser}}"
-          echo "severidad: ${{inputs.tags}}"
+          echo "severidad: ${{inputs.severidad}}"
