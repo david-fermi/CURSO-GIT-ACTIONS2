@@ -5,11 +5,14 @@ on:
     inputs:
       severidad:
         description: Critical feature?
-        type: boolean 
+        type: boolean
+      release:
+        description: Is a release?
+        type: boolean  
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest
     steps:
       - name: Comments
         run: |
-          echo "Comments  WORKFLOW dispatch - ${{inputs.severidad}}"
+          echo "Comments  WORKFLOW dispatch - ${{inputs.severidad.release}}"
