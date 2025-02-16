@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Comments
         run: | 
-          echo "Comment on workflow - branches ignore"
+          echo "Comment on workflow - branches ignore - using branch_feature"
