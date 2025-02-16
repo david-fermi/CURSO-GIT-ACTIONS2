@@ -1,4 +1,4 @@
-name: Github actions - Push Template Basic
+name: Github actions - Push - Path Template
 run-name: Running - ${{ github.event_name }}
 on:
   push:
