@@ -3,11 +3,13 @@ run-name: Running - ${{ github.event_name }}
 on:
   push:
     branches:
+      - main
       - develop
+      - 'release/**'
 jobs:
   on-push:
     runs-on: ubuntu-latest
     steps:
       - name: Comments
         run: | 
-          echo "Comment on branch develop PUSH2"
+          echo "Comment on push workflow - branch"
