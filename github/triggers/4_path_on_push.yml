@@ -1,0 +1,13 @@
+name: Github actions - Push Template Basic
+run-name: Running - ${{ github.event_name }}
+on:
+  push:
+    paths:
+      - '**.txt'
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: | 
+          echo "Comment on workflow - push on path PUSH"
