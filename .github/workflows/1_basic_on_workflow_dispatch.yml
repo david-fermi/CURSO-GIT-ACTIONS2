@@ -1,0 +1,10 @@
+name: GitHub Actions - Workflow dispatch Basic Template
+run-name: Running - ${{ github.event_name }}
+on: [workflow_dispatch]
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo "Comments PULL REQUEST WORKFLOW - branch"
