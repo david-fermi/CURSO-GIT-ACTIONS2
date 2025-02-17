@@ -1,0 +1,13 @@
+name: GitHub Actions - Worflow run branches
+run-name: Running - Workflow run branches
+on:
+  workflow_run:
+    workflows: [GitHub Actions - Trigger 1]
+    branches: [main]
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo "Workflow has been triggered" 
