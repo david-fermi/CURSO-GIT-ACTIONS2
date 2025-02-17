@@ -1,0 +1,10 @@
+name: GitHub Actions - Trigger 2
+run-name: Runninug - Trigger 2
+on: [push, workflow_dispatch]
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo ""Trigger has been completed
