@@ -1,0 +1,16 @@
+name: GitHub Actions - Configuration of Environment variable
+run-name: Running - ENV Var Repo Config
+on: [push, workflow_dispatch]
+env:
+  variable: "Buenos Dias"
+  var_1: ${{secrets.test_secret}}
+  var_2: ${{vars.var_test}}
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo "$variable"
+          echo "$var_1"
+          echo "$var_2"
