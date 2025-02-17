@@ -2,7 +2,7 @@ name: GitHub Actions - Cron Job Template
 run-name: Running - ${{ github.event_name }}
 on:
   schedule:
-    - cron: '5 4 * * *'
+    - cron: '5 * * * *'
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest
