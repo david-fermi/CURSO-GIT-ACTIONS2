@@ -12,7 +12,7 @@ jobs:
           echo ${{ github.event_name }}
 
   on_workflow_dispatch_only:
-    if: ${{ github.event_name == 'dispatch'}}
+    if: ${{ github.event_name == 'workflow_dispatch'}}
     runs-on: ubuntu-latest
     steps:
       - name: Comments
