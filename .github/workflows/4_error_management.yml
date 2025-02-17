@@ -25,3 +25,17 @@ jobs:
         if: always()
         run: |
           echo Comments after error
+
+  job_3_continue_on_error:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo Comments before error 
+          exit 1
+        continue-on-error: true
+      - name: Comments
+        run: |
+          echo Comments after error
+
+          
