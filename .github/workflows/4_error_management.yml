@@ -3,7 +3,6 @@ run-name: Running - Managing errors
 on: [push, workflow_dispatch]
 
 jobs:
-  
   job_1_error:
     runs-on: ubuntu-latest
     steps:
@@ -12,5 +11,17 @@ jobs:
           echo Comments before error 
           exit 1
       - name: Comments
+        run: |
+          echo Comments after error
+
+  job_2_always:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comments
+        run: |
+          echo Comments before error 
+          exit 1
+      - name: Comments
+        if: always()
         run: |
           echo Comments after error
