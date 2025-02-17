@@ -4,7 +4,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   on-push-only:
-    if: ${{ github.event  == 'push '}}
+    if: ${{ github.event_name  == 'push '}}
     runs-on: ubuntu-latest
     steps:
       - name: Comments
